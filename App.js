@@ -44,7 +44,12 @@ const App = () => {
   return (
     <>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator
+          screenOptions={{
+            tabBarActiveTintColor: "black",
+            tabBarInactiveTintColor: "gray",
+          }}
+        >
           <Tab.Screen
             name="HOME"
             component={HomeScreen}
