@@ -5,6 +5,8 @@ import { View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon2 from "react-native-vector-icons/Ionicons";
+import Icon3 from "react-native-vector-icons/FontAwesome5";
+import Calendar from "./components/Calendar";
 
 const HomeScreen = () => {
   return (
@@ -17,7 +19,7 @@ const HomeScreen = () => {
 const CalendarScreen = () => {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Calendar</Text>
+      <Calendar />
     </View>
   );
 };
@@ -42,7 +44,7 @@ const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    <>
+    <View style={{ flex: 1 }}>
       <NavigationContainer>
         <Tab.Navigator
           screenOptions={{
@@ -73,7 +75,7 @@ const App = () => {
             component={LibraryScreen}
             options={{
               tabBarIcon: ({ color, size }) => (
-                <Icon2 name="library-outline" color={color} size={size} />
+                <Icon3 name="dumbbell" color={color} size={size} />
               ),
             }}
           />
@@ -89,7 +91,7 @@ const App = () => {
         </Tab.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
-    </>
+    </View>
   );
 };
 
